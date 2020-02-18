@@ -1,4 +1,4 @@
-17 [1]
+17 Padding Oracle Attack [1]
 
 Problem: Select at random one of the strings from 17.txt. Generate a random AES key and encrypt the padded string with a random IV using CBC encryption. An oracle should decrypt a string using before generated key and return whether the padding is correct.
 
@@ -34,3 +34,12 @@ but the last character must be the guess, and you must derive all other nonzeros
 with a different k from before and with P_n[k] = C'[-1].
 
 [1]: https://blog.skullsecurity.org/2013/padding-oracle-attacks-in-depth
+
+18 Implement CTR [2]
+
+C_i = E((nonce + ctr)) ^ P_i
+P_i = E((nonce _ ctr)) ^ C_i
+
+Both CTR encryption and decryption use ECB encryption.
+
+[2]: https://www.youtube.com/watch?v=6EbyCGrdKh8
